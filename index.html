@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Strada_Chat</title>
+</head>
+
+<body>
+	<div class="bg-container">
+		<div class="chat">
+			<div class="chat__top">
+				<button class="chat__top-btn chat__top-btn--setings" type="button">Настройки</button>
+				<button class="chat__top-btn chat__top-btn--login" type="button">Войти</button>
+			</div>
+			<div class="chat__content-wrapper">
+				<div class="chat__content">
+					<!-- <div class="chat__content-items chat__content-items--right">
+						<div class="chat__content-item-text">Я: Добрый день!</div>
+						<div class="chat__content-item-time">18:45</div>
+					</div>
+					<div class="chat__content-items chat__content-items--left">
+						<div class="chat__content-item-text">Собеседник мой: Добрый день!</div>
+						<div class="chat__content-item-time">18:45</div>
+					</div>
+					<div class="chat__content-items chat__content-items--left">
+						<div class="chat__content-item-text">Собеседник мой: А это второе и, кажется, оно очень
+							длинное, чтобы поместиться на
+							одной строке</div>
+						<div class="chat__content-item-time">18:45</div>
+					</div>
+					<div class="chat__content-items chat__content-items--right chat__content-items--unread">
+						<div class="chat__content-item-text">Я: Добрый день!</div>
+						<div class="chat__content-item-time">18:45</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="chat__message">
+				<form class="chat__message-form" action="#">
+					<input class="chat__message-input" type="text" placeholder="сообщение...">
+					<button class="chat__message-btn" type="submit">
+						<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M4.10156 4.75781H0.289062V3.57812H4.10156V4.75781ZM10.6328 3.92188L5.46875 1.89844V0.414062L12.1406 3.36719V4.50781L5.46875 7.46875V5.96875L10.6328 3.92188Z"
+								fill="black" />
+						</svg>
+					</button>
+				</form>
+			</div>
+
+			<div class="modals">
+				<div class="modals__overlay">
+
+					<div class="modals__content modals__settings">
+						<div class="modals__inner">
+							<h3 class="modals__title">Настройки</h3>
+							<button class="modals__close-btn" type="button">X</button>
+						</div>
+						<h4>Имя в чате</h4>
+						<form class="modals__form modals__settings-form" action="#">
+							<div class="modals__form__inner">
+								<input class="modals__input modals__settings-input" type="text" placeholder="Введите имя">
+								<button class="modals__btn" type="submit">
+									<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4.10156 4.75781H0.289062V3.57812H4.10156V4.75781ZM10.6328 3.92188L5.46875 1.89844V0.414062L12.1406 3.36719V4.50781L5.46875 7.46875V5.96875L10.6328 3.92188Z"
+											fill="black" />
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<div class="modals__content modals__login">
+						<div class="modals__inner">
+							<h3 class="modals__title">Авторизация</h3>
+							<button class="modals__close-btn" type="button">X</button>
+						</div>
+						<h4>Почта</h4>
+						<form class="modals__form modals__login-form" action="#">
+							<input class="modals__login-input modals__input" type="email" placeholder="Введите ваш email">
+							<button class="modals__btn" type="submit">Получить код</button>							
+						</form>
+						<button class="modals__btn modals__code__btn" type="submit">Введите код</button>
+							<output class="modals__login-successful"></output>
+					</div>
+					
+					<div class="modals__content modals__code">
+						<div class="modals__inner">
+							<h3 class="modals__title">Подтверждение</h3>
+							<button class="modals__close-btn" type="button">X</button>
+						</div>
+						<h4>Код</h4>
+						<form class="modals__form modals__code-form" action="#">
+							<input class="modals__code-input modals__code" type="text" placeholder="Введите код">
+							<button class="modals__btn" type="submit">Войти</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<template class="template" id="tmpl">
+		<div class="chat__content-items chat__content-items--right chat__content-items--unread">
+			<span class="chat__content-item-name"></span>
+			<div class="chat__content-item-text"></div>
+			<div class="chat__content-item-time"></div>
+		</div>
+	</template>
+	
+	<script src="https://unpkg.com/cookielib/src/cookie.js"></script>
+	<script type="module" src="js/index.js"></script>
+</body>
+
+</html>
